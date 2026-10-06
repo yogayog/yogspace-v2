@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket & Harga Layanan IT — YogSpace</title>
+    <meta name="description" content="Daftar lengkap paket dan estimasi harga layanan Pemasangan Access Point Wi-Fi, Web Hosting, CCTV, Setting Sistem Jaringan, Pembuatan Aplikasi, dan Maintenance IT dari YogSpace.">
+    
+    <!-- Google Fonts: Syne & Plus Jakarta Sans & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        pureWhite: '#FFFFFF',
+                        softBg: '#FAFBFD',
+                        slateDark: '#0F172A',
+                        slateLight: '#F1F5F9',
+                        accentBlue: '#0052FF',
+                        mutedGrey: '#64748B'
+                    },
+                    fontFamily: {
+                        syne: ['Syne', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- External Libraries (CDN) -->
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis Smooth Scroll -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-pureWhite dark:bg-[#0B0F17] text-slateDark dark:text-slate-100 font-sans antialiased w-full max-w-full overflow-x-hidden relative selection:bg-slateDark selection:text-white custom-cursor-active transition-colors duration-300">
+
+    <!-- KURSUS MOUSE CUSTOM -->
+    <div id="cursor-dot" class="custom-cursor-dot"></div>
+    <div id="cursor-follower" class="custom-cursor-follower">
+        <span id="cursor-text" class="cursor-text opacity-0 font-space text-[10px] tracking-widest uppercase font-bold text-white"></span>
+    </div>
+
+    <!-- HEADER / NAVIGASI -->
+    <header id="main-header" class="fixed top-0 left-0 w-full max-w-full z-50 transition-all duration-300 py-5 bg-white/90 dark:bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between w-full">
+            <!-- Logo Brand -->
+            <a href="index.html" class="magnetic-target flex items-center gap-2 group z-50" data-cursor="pointer">
+                <span class="font-syne text-2xl font-extrabold tracking-tighter text-slateDark dark:text-white group-hover:text-accentBlue transition-colors">
+                    Yog<span class="text-accentBlue">Space</span>
+                </span>
+                <span class="text-[10px] font-space tracking-widest text-slateDark dark:text-slate-300 bg-slateLight dark:bg-slate-800 px-2.5 py-0.5 rounded-full border border-slate-200 dark:border-slate-700 hidden sm:inline-block font-semibold">
+                    Rincian Paket & Harga
+                </span>
+            </a>
+
+            <!-- Navigation Actions -->
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="magnetic-target font-space text-xs uppercase tracking-widest text-slateDark/80 dark:text-slate-300 hover:text-accentBlue transition-colors flex items-center gap-2 bg-slateLight dark:bg-slate-800 px-3.5 sm:px-4 py-2 rounded-full border border-slate-200 dark:border-slate-700" data-cursor="pointer">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">Kembali ke Beranda</span>
+                    <span class="sm:hidden">Beranda</span>
+                </a>
+
+                <!-- Switcher Tema Mode Gelap/Terang -->
+                <button id="theme-toggle-btn" type="button" aria-label="Toggle Mode Gelap/Terang" class="theme-toggle-btn magnetic-target p-2.5 rounded-full bg-slateLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slateDark dark:text-white hover:border-slate-400 dark:hover:border-slate-500 transition-all shadow-sm" data-cursor="pointer">
+                    <i data-lucide="sun" class="theme-icon-sun w-4 h-4 hidden text-amber-400"></i>
+                    <i data-lucide="moon" class="theme-icon-moon w-4 h-4 text-slate-700 dark:text-slate-300"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- KONTEN UTAMA -->
+    <main class="pt-28 pb-20 w-full max-w-full overflow-hidden">
+        <!-- SEKSI HERO & JUDUL -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 pt-8 pb-12 text-center w-full max-w-full overflow-hidden">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slateLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slateDark dark:text-slate-200 font-space text-xs font-semibold uppercase tracking-wider mb-6 max-w-full">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                <span class="truncate sm:whitespace-normal">Transparansi Paket & Estimasi Biaya</span>
+            </div>
+            <h1 class="font-syne font-extrabold text-3xl sm:text-5xl md:text-6xl text-slateDark dark:text-white tracking-tight max-w-4xl mx-auto leading-tight mb-6 break-words">
+                Pilihan Paket Layanan IT Terintegrasi
+            </h1>
+            <p class="font-sans text-mutedGrey dark:text-slate-400 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Temukan paket pemasangan Access Point, CCTV, Web Hosting, Optimasi Sistem Jaringan, Pembuatan Aplikasi, hingga Pemeliharaan IT sesuai budget & skala lokasi Anda.
+            </p>
+        </section>
+
+        <!-- TAB FILTER KATEGORI -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mb-12 w-full max-w-full overflow-hidden">
+            <div class="flex items-center sm:justify-center gap-2 sm:gap-3 bg-slateLight/60 dark:bg-slate-900/60 p-2 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-x-auto max-w-full no-scrollbar whitespace-nowrap">
+                <button type="button" data-category="all" class="service-tab-btn flex-shrink-0 px-4 sm:px-5 py-2.5 rounded-xl font-space text-xs font-bold uppercase tracking-wider transition-all bg-slateDark text-white dark:bg-emerald-600" data-cursor="pointer">Semua Paket</button>
+                <button type="button" data-category="ap" class="service-tab-btn flex-shrink-0 px-4 sm:px-5 py-2.5 rounded-xl font-space text-xs font-bold uppercase tracking-wider transition-all bg-slateLight text-slateDark dark:bg-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700" data-cursor="pointer">Router & Access Point</button>
+                <button type="button" data-category="hosting" class="service-tab-btn flex-shrink-0 px-4 sm:px-5 py-2.5 rounded-xl font-space text-xs font-bold uppercase tracking-wider transition-all bg-slateLight text-slateDark dark:bg-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700" data-cursor="pointer">Web Hosting</button>
+                <button type="button" data-category="cctv" class="service-tab-btn flex-shrink-0 px-4 sm:px-5 py-2.5 rounded-xl font-space text-xs font-bold uppercase tracking-wider transition-all bg-slateLight text-slateDark dark:bg-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700" data-cursor="pointer">CCTV Security</button>
+                <button type="button" data-category="network" class="service-tab-btn flex-shrink-0 px-4 sm:px-5 py-2.5 rounded-xl font-space text-xs font-bold uppercase tracking-wider transition-all bg-slateLight text-slateDark dark:bg-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700" data-cursor="pointer">Optimasi Jaringan</button>
+                <button type="button" data-category="app" class="service-tab-btn flex-shrink-0 px-4 sm:px-5 py-2.5 rounded-xl font-space text-xs font-bold uppercase tracking-wider transition-all bg-slateLight text-slateDark dark:bg-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700" data-cursor="pointer">Pembuatan Aplikasi</button>
+                <button type="button" data-category="maintenance" class="service-tab-btn flex-shrink-0 px-4 sm:px-5 py-2.5 rounded-xl font-space text-xs font-bold uppercase tracking-wider transition-all bg-slateLight text-slateDark dark:bg-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700" data-cursor="pointer">Maintenance IT</button>
+            </div>
+        </section>
+
+        <!-- GRID KARTU PAKET HARGA -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full max-w-full overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-full">
+                
+                <!-- 1. ROUTER: PAKET HOME -->
+                <div data-category="ap" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 text-accentBlue dark:text-blue-400 font-space text-[10px] font-bold uppercase">Router Wi-Fi</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">Skala Home</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Paket Home</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Pemasangan 1 unit Router Dual Band Ruijie untuk jangkauan sinyal rumah & usaha skala kecil.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 950.000</div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Termasuk Router, Kabel LAN 20m & Instalasi</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>1 Buah Router Ruijie Dual Band (RG-EW1200)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penarikan Kabel LAN CAT6 20M</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Jasa Instalasi & Setting</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Garansi 3 Bulan</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penggunaan 1-15 Perangkat</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Paket%20Home%20(Rp%20950.000)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Paket Ini</span>
+                    </a>
+                </div>
+
+                <!-- 2. ROUTER: PAKET VILLA & CAFE -->
+                <div data-category="ap" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border-2 border-accentBlue dark:border-emerald-500 shadow-lg relative">
+                    <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-accentBlue text-white font-space text-[10px] font-bold uppercase tracking-wider">Terpopuler</div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 text-accentBlue dark:text-blue-400 font-space text-[10px] font-bold uppercase">Router Wi-Fi</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">Skala Menengah</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Paket Villa & Cafe</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Pemasangan 3 unit Router Ruijie Dual Band untuk jangkauan sinyal luas di Villa & Cafe.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 2.700.000</div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Termasuk 3 Router, Kabel LAN 60m & Setting</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>3 Buah Router Ruijie Dual Band (RG-EW1200)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penarikan Kabel LAN CAT6 60M</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Jasa Instalasi & Setting</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Garansi 6 Bulan Perangkat & Settingan</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penggunaan 10-25 Perangkat</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Paket%20Villa%20%26%20Cafe%20(Rp%202.700.000)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-accentBlue text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-blue-700 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Paket Ini</span>
+                    </a>
+                </div>
+
+                <!-- 3. ROUTER: PAKET KOST & HOMESTAY -->
+                <div data-category="ap" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 text-accentBlue dark:text-blue-400 font-space text-[10px] font-bold uppercase">Router Wi-Fi</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">Skala Bisnis</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Paket Kost & Homestay</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Solusi 5 unit Router Ruijie Dual Band + Switch 8 Port untuk area Kost & Homestay.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 5.020.000</div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Termasuk 5 Router, Switch 8 Port & Kabel 100m</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>5 Buah Router Ruijie Dual Band (RG-EW1200)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penarikan Kabel LAN CAT6 100M</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Switch 8 Port Megabit</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Jasa Instalasi & Setting</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Garansi 1 Tahun Perangkat & Settingan</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penggunaan 30-40 Perangkat</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Paket%20Kost%20%26%20Homestay%20(Rp%205.020.000)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Paket Ini</span>
+                    </a>
+                </div>
+
+                <!-- 4. ROUTER: PAKET ENTERPRISE & APARTEMEN -->
+                <div data-category="ap" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 text-accentBlue dark:text-blue-400 font-space text-[10px] font-bold uppercase">Router Wi-Fi</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">Skala Enterprise</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Paket Enterprise & Apartemen</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Instalasi 10 unit Router Ruijie Dual Band + Switch 16 Port & Kabel 300m untuk Enterprise & Apartemen.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 10.235.000</div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Termasuk 10 Router, Switch 16 Port & Kabel 300m</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>10 Buah Router Ruijie Dual Band (RG-EW1200)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penarikan Kabel LAN CAT6 300M</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Switch 16 Port Megabit</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Jasa Instalasi & Setting</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Garansi 1 Tahun Perangkat & Setting</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Free Kunjungan Setiap 2 Bulan</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Penggunaan 50+ Perangkat</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Paket%20Enterprise%20%26%20Apartemen%20(Rp%2010.235.000)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Paket Ini</span>
+                    </a>
+                </div>
+
+                <!-- 4. WEB HOSTING: STARTER CLOUD -->
+                <div data-category="hosting" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-900 text-emerald-600 dark:text-emerald-400 font-space text-[10px] font-bold uppercase">Web Hosting</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">Hosting Perusahaan</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Paket Hosting Pro & Email Biz</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Hosting SSD NVMe ultra cepat dengan sertifikat SSL gratis, backup harian, dan email domain perusahaan.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 650.000 <span class="text-xs font-normal text-mutedGrey">/ thn</span></div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Sudah termasuk domain .COM gratis</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>15 GB SSD NVMe Storage Super Cepat</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Unlimited Bandwidth & SSL HTTPS Gratis</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>10 Akun Email Profesional (@domainanda.com)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Gratis Domain .COM Selama 1 Tahun</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Auto Daily Backup & Protection Firewall</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Paket%20Hosting%20Pro%20%26%20Email%20Biz%20(Rp%20650.000%2Fthn)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Hosting</span>
+                    </a>
+                </div>
+
+                <!-- 5. CCTV SECURITY: PAKET 4 KAMERA FULL HD -->
+                <div data-category="cctv" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/60 border border-purple-200 dark:border-purple-900 text-purple-600 dark:text-purple-400 font-space text-[10px] font-bold uppercase">CCTV Security</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">4 Kamera</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Paket CCTV 4 Kamera HD Online</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Instalasi lengkap 4 kamera CCTV Full HD Night Vision dengan pemantauan langsung via HP (iOS/Android).
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 2.450.000</div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Termasuk Harddisk 1TB & setting aplikasi HP</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>4 Unit Kamera Indoor/Outdoor 2MP Full HD</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>1 Unit DVR 4-Channel Online Access</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Harddisk Surveillance 1TB (Rekam 24/7 2-3 Minggu)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Fitur Night Vision IR Infrared Jelas saat Malam</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Kabel RG59/Coaxial Coaxial + Power (50m)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Paket%20CCTV%204%20Kamera%20HD%20Online%20(Rp%202.450.000)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Paket CCTV</span>
+                    </a>
+                </div>
+
+                <!-- 6. OPTIMASI JARINGAN: MIKROTIK QOS & FIREWALL -->
+                <div data-category="network" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-900 text-amber-600 dark:text-amber-400 font-space text-[10px] font-bold uppercase">Optimasi Sistem</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">MikroTik QoS</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Setting Router & Bandwidth Management</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Setting router MikroTik untuk pembagian bandwidth adil, pencegahan jaringan lemot, dan proteksi firewall.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 500.000</div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Jasa konfigurasi remote / kunjungan lokasi</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Manajemen Bandwidth QoS (Simple Queue / Queue Tree)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Pemisahan Trafik Game, Zoom, Video Streaming & Browsing</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Keamanan Firewall Filter & Anti Netcut / Attack</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Konfigurasi VPN Remote Access</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Setting%20Router%20%26%20Bandwidth%20Management%20(Rp%20500.000)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Optimasi Sistem</span>
+                    </a>
+                </div>
+
+                <!-- 7. PEMBUATAN APLIKASI: WEBSITE PROFIL / LANDING PAGE -->
+                <div data-category="app" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-900 text-indigo-600 dark:text-indigo-400 font-space text-[10px] font-bold uppercase">Pembuatan Aplikasi</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">Web Landing Page</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Website Perusahaan / Landing Page</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Pembuatan website profil perusahaan responsif, modern, interaktif, dan teroptimasi SEO Google.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 1.500.000</div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Masa pengerjaan 3 - 5 hari kerja</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Desain Kustom Modern, Responsif HP & Laptop</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Integrasi Tombol WhatsApp Direct Chat</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Optimasi Kecepatan Load & SEO Google Basic</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Gratis Domain .COM & Hosting 1 Tahun</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Pembuatan%20Website%20Perusahaan%20%2F%20Landing%20Page%20(Rp%201.500.000)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Pesan Pembuatan Web</span>
+                    </a>
+                </div>
+
+                <!-- 8. MAINTENANCE IT: BULANAN ON-CALL -->
+                <div data-category="maintenance" class="pricing-package-card tilt-card flex flex-col justify-between p-8 rounded-3xl bg-white dark:bg-[#121824] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-900 text-teal-600 dark:text-teal-400 font-space text-[10px] font-bold uppercase">Maintenance IT</span>
+                            <span class="text-xs font-space text-mutedGrey dark:text-slate-400">Pemeliharaan Rutin</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-2">Paket Maintenance Kantoran & Cafe</h3>
+                        <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mb-6 leading-relaxed">
+                            Dukungan pemeliharaan perangkat keras & jaringan secara berkala untuk menjaga kelancaran operasional.
+                        </p>
+                        
+                        <div class="mb-6 p-4 rounded-2xl bg-softBg dark:bg-[#0B0F17] border border-slate-100 dark:border-slate-800">
+                            <div class="font-space text-3xl font-extrabold text-slateDark dark:text-white">Rp 1.200.000 <span class="text-xs font-normal text-mutedGrey">/ bln</span></div>
+                            <div class="font-sans text-[11px] text-mutedGrey dark:text-slate-400 mt-1">*Kunjungan rutin 2x sebulan + Emergency support</div>
+                        </div>
+
+                        <ul class="space-y-3 mb-8 text-xs font-sans text-slateDark dark:text-slate-200">
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Pemeriksaan Rutin Perangkat Jaringan (2x / Bulan)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Pembersihan Hardware PC/Server & Audit Keamanan</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Priority Remote Support & Konsultasi IT 24/7</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0"></i>
+                                <span>Diskon 20% Jasa Penambahan Unit Perangkat Baru</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20berminat%20Paket%20Maintenance%20Kantoran%20%26%20Cafe%20(Rp%201.200.000%2Fbln)." target="_blank" class="magnetic-target w-full py-3.5 rounded-xl bg-slateDark dark:bg-emerald-600 text-white font-space font-bold uppercase tracking-wider text-xs hover:bg-emerald-600 dark:hover:bg-emerald-500 shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Langganan Maintenance</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEKSI KONSULTASI CUSTOM / CUSTOM PROJECT CTA -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mt-16 sm:mt-20 w-full max-w-full overflow-hidden">
+            <div class="p-6 sm:p-8 md:p-12 rounded-3xl bg-slateDark dark:bg-[#131A2A] text-white relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 border border-slate-800 max-w-full">
+                <div class="relative z-10 max-w-xl">
+                    <span class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 font-space text-xs font-bold uppercase mb-3">Butuh Spesifikasi Khusus?</span>
+                    <h3 class="font-syne font-extrabold text-2xl sm:text-4xl mb-4 break-words">Punya Proyek Kustom atau Kebutuhan Skala Besar?</h3>
+                    <p class="font-sans text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        Kami melayani survey lokasi langsung, perancangan topologi jaringan skala besar, instalasi fiber optic, hingga pembuatan sistem aplikasi enterprise.
+                    </p>
+                </div>
+                <div class="relative z-10 flex-shrink-0 w-full sm:w-auto">
+                    <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20ingin%20konsultasi%20proyek%20kustom%2Fskala%20besar." target="_blank" class="magnetic-target px-6 sm:px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-space font-bold uppercase tracking-widest text-xs shadow-lg transition-colors flex items-center justify-center gap-2 w-full sm:w-auto" data-cursor="pointer">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Diskusi Proyek Kustom</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative pt-16 pb-12 px-4 sm:px-6 md:px-12 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0B0F17] max-w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10 w-full">
+            <div>
+                <a href="index.html" class="font-syne text-2xl font-extrabold tracking-tighter text-slateDark dark:text-white">
+                    Yog<span class="text-accentBlue">Space</span>
+                </a>
+                <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 mt-2 max-w-sm">
+                    Layanan profesional IT, Pemasangan Access Point, Web Hosting, Pemasangan CCTV, Setting & Optimasi Sistem, serta Pembuatan Aplikasi.
+                </p>
+                <div class="flex items-start gap-2 mt-3 font-sans text-xs text-mutedGrey dark:text-slate-400 max-w-sm">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5"></i>
+                    <span>Jl. Gunung Talang No. 100, Padangsambian, Denpasar Barat, Denpasar, Bali</span>
+                </div>
+            </div>
+
+            <!-- Link Kontak -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/6285748961065" target="_blank" class="magnetic-target text-slateDark dark:text-slate-200 hover:text-emerald-600 transition-colors p-2.5 rounded-full bg-slateLight dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center gap-2 text-xs font-space font-semibold" data-cursor="pointer">
+                    <i data-lucide="phone" class="w-4 h-4 text-emerald-600"></i>
+                    <span>+62 857-4896-1065</span>
+                </a>
+            </div>
+
+            <!-- Hak Cipta -->
+            <div class="font-space text-xs text-mutedGrey dark:text-slate-400">
+                © <span id="year">2026</span> YogSpace. Hak Cipta Dilindungi Undang-Undang.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Berkas Script JavaScript -->
+    <script src="js/cursor.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
