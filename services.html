@@ -702,7 +702,75 @@
                 © <span id="year">2026</span> YogSpace. Hak Cipta Dilindungi Undang-Undang.
             </div>
         </div>
-    </footer>
+    <!-- MODAL SURVEY & REGISTRASI PEMESANAN PAKET -->
+    <div id="survey-modal" data-lenis-prevent class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slateDark/75 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300">
+        <div data-lenis-prevent class="bg-white dark:bg-[#121824] rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl max-w-lg w-full p-6 sm:p-8 relative overflow-hidden max-h-[90vh] overflow-y-auto">
+            
+            <!-- Tombol Close Modal -->
+            <button type="button" id="survey-modal-close" class="absolute top-5 right-5 p-2 rounded-full bg-slateLight dark:bg-slate-800 text-slateDark dark:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" data-cursor="pointer">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="mb-5">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-accentBlue dark:text-blue-400 font-space text-[10px] font-bold uppercase tracking-wider mb-2 border border-blue-200 dark:border-blue-900">
+                    Form Survey & Pemesanan Paket
+                </span>
+                <h3 class="font-syne font-bold text-2xl text-slateDark dark:text-white mb-1">Registrasi Survey Lokasi</h3>
+                <p class="font-sans text-xs text-mutedGrey dark:text-slate-400 leading-relaxed">
+                    Lengkapi data lokasi Anda. Tim teknisi YogSpace akan menghubungi Anda untuk konfirmasi jadwal survey & konsultasi gratis.
+                </p>
+            </div>
+
+            <form id="survey-form" class="space-y-4 font-sans text-xs">
+                <!-- Info Paket Dipilih -->
+                <div class="p-3.5 rounded-2xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-100 dark:border-blue-900/50">
+                    <div class="font-space text-[10px] uppercase tracking-wider text-mutedGrey dark:text-slate-400 mb-0.5">Paket Layanan Dipilih:</div>
+                    <div id="modal-package-name" class="font-syne font-bold text-base text-accentBlue dark:text-blue-400">-</div>
+                    <div id="modal-package-price" class="font-space text-xs font-semibold text-slateDark dark:text-white mt-0.5">-</div>
+                </div>
+
+                <!-- Nama Lengkap -->
+                <div>
+                    <label for="survey-name" class="block font-space font-semibold text-slateDark dark:text-slate-200 mb-1">Nama Lengkap *</label>
+                    <input type="text" id="survey-name" required placeholder="Contoh: Budi Pratama" class="w-full px-4 py-3 rounded-xl bg-slateLight dark:bg-[#0B0F17] border border-slate-200 dark:border-slate-800 text-slateDark dark:text-white focus:outline-none focus:border-accentBlue transition-colors">
+                </div>
+
+                <!-- Nomor WhatsApp / Telp -->
+                <div>
+                    <label for="survey-phone" class="block font-space font-semibold text-slateDark dark:text-slate-200 mb-1">Nomor WhatsApp / HP *</label>
+                    <input type="tel" id="survey-phone" required placeholder="Contoh: 081234567890" class="w-full px-4 py-3 rounded-xl bg-slateLight dark:bg-[#0B0F17] border border-slate-200 dark:border-slate-800 text-slateDark dark:text-white focus:outline-none focus:border-accentBlue transition-colors">
+                </div>
+
+                <!-- Alamat / Lokasi Survey -->
+                <div>
+                    <label for="survey-address" class="block font-space font-semibold text-slateDark dark:text-slate-200 mb-1">Alamat Lengkap / Lokasi Survey *</label>
+                    <textarea id="survey-address" required rows="2" placeholder="Contoh: Jl. Sunset Road No. 88, Kuta, Badung, Bali" class="w-full px-4 py-3 rounded-xl bg-slateLight dark:bg-[#0B0F17] border border-slate-200 dark:border-slate-800 text-slateDark dark:text-white focus:outline-none focus:border-accentBlue transition-colors"></textarea>
+                </div>
+
+                <!-- Rencana Tanggal Survey -->
+                <div>
+                    <label for="survey-date" class="block font-space font-semibold text-slateDark dark:text-slate-200 mb-1">Rencana Tanggal Survey *</label>
+                    <input type="date" id="survey-date" required class="w-full px-4 py-3 rounded-xl bg-slateLight dark:bg-[#0B0F17] border border-slate-200 dark:border-slate-800 text-slateDark dark:text-white focus:outline-none focus:border-accentBlue transition-colors">
+                </div>
+
+                <!-- Catatan Tambahan -->
+                <div>
+                    <label for="survey-notes" class="block font-space font-semibold text-slateDark dark:text-slate-200 mb-1">Catatan Tambahan (Opsional)</label>
+                    <input type="text" id="survey-notes" placeholder="Contoh: Bangunan 2 lantai, mohon survey jam 2 siang" class="w-full px-4 py-3 rounded-xl bg-slateLight dark:bg-[#0B0F17] border border-slate-200 dark:border-slate-800 text-slateDark dark:text-white focus:outline-none focus:border-accentBlue transition-colors">
+                </div>
+
+                <div class="pt-2 flex items-center gap-3">
+                    <button type="button" id="survey-modal-cancel" class="w-1/3 py-3 rounded-xl border border-slate-200 dark:border-slate-700 font-space font-bold uppercase text-xs text-slateDark dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" data-cursor="pointer">
+                        Batal
+                    </button>
+                    <button type="submit" class="w-2/3 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-space font-bold uppercase tracking-wider text-xs shadow-md transition-colors flex items-center justify-center gap-2" data-cursor="pointer">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Kirim via WhatsApp</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Berkas Script JavaScript -->
     <script src="js/cursor.js"></script>

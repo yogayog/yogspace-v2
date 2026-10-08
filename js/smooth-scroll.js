@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetEl) {
                 e.preventDefault();
                 const header = document.getElementById('main-header');
-                const headerOffset = header ? header.offsetHeight + 10 : 70;
+                const headerOffset = header ? header.offsetHeight + 35 : 95;
 
                 if (lenisInstance) {
                     lenisInstance.scrollTo(targetEl, {

@@ -508,188 +508,191 @@
         </section>
 
         <!-- 4. SEKSI PORTOFOLIO (DOKUMENTASI DENGAN GAMBAR REAL) -->
-        <section id="portfolio" class="relative overflow-hidden max-w-full bg-white border-t border-b border-slate-200">
-            <div id="portfolio-pin-wrapper"
-                class="w-full max-w-full min-h-screen py-24 flex flex-col justify-center overflow-hidden">
+        <section id="portfolio" class="relative overflow-hidden max-w-full bg-white border-t border-b border-slate-200 py-16 sm:py-20 scroll-mt-28 sm:scroll-mt-32">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full mb-8 sm:mb-10">
+                <!-- Judul Seksi & Navigasi Scroll -->
+                <div class="flex items-end justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-3 mb-2 sm:mb-3">
+                            <span class="h-px w-10 bg-slateDark"></span>
+                            <span class="font-space text-xs uppercase tracking-widest text-slateDark font-bold">03
+                                // Dokumentasi Proyek</span>
+                        </div>
+                        <h2
+                            class="font-syne font-extrabold text-2xl sm:text-4xl md:text-5xl text-slateDark tracking-tight break-words">
+                            Karya & Implementasi Terbaik
+                        </h2>
+                    </div>
 
-                <!-- Judul Seksi (Sticky saat scroll horizontal) -->
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full mb-12">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="h-px w-10 bg-slateDark"></span>
-                                <span class="font-space text-xs uppercase tracking-widest text-slateDark font-bold">03
-                                    // Dokumentasi Proyek</span>
-                            </div>
-                            <h2
-                                class="font-syne font-extrabold text-3xl sm:text-5xl md:text-6xl text-slateDark tracking-tight break-words">
-                                Karya & Implementasi Terbaik
-                            </h2>
-                        </div>
-                        <div class="hidden sm:flex items-center gap-2 text-xs font-space uppercase text-mutedGrey">
-                            <span>Geser ke samping</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4 text-slateDark animate-pulse"></i>
-                        </div>
+                    <!-- Tombol Navigasi Scroll Samping -->
+                    <div class="flex items-center gap-2 flex-shrink-0">
+                        <span class="hidden sm:inline-block font-space text-xs uppercase text-mutedGrey mr-2">Geser untuk melihat</span>
+                        <button type="button" id="portfolio-scroll-left" class="p-2.5 sm:p-3 rounded-full border border-slate-200 text-slateDark hover:bg-slateDark hover:text-white transition-all shadow-sm" data-cursor="pointer" title="Scroll Kiri">
+                            <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                        </button>
+                        <button type="button" id="portfolio-scroll-right" class="p-2.5 sm:p-3 rounded-full border border-slate-200 text-slateDark hover:bg-slateDark hover:text-white transition-all shadow-sm" data-cursor="pointer" title="Scroll Kanan">
+                            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Kontainer Jalur Horizontal -->
-                <div class="overflow-hidden w-full max-w-full">
-                    <div id="portfolio-track" class="flex gap-4 sm:gap-8 px-4 sm:px-6 md:px-12 w-max max-w-none">
+            <!-- Kontainer Jalur Scroll Samping (Horizontal Track) -->
+            <div id="portfolio-scroll-container" class="overflow-x-auto w-full max-w-full no-scrollbar pb-6 pt-2 scroll-smooth snap-x snap-mandatory">
+                <div id="portfolio-track" class="flex gap-6 sm:gap-8 px-4 sm:px-6 md:px-12 w-max">
 
-                        <!-- Kartu Proyek 1: Pemasangan Access Point Wi-Fi -->
-                        <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-2.5rem)] sm:w-[500px] md:w-[620px] rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-8 shadow-sm group transition-all"
-                            data-cursor="project">
+                    <!-- Kartu Proyek 1: Pemasangan Access Point Wi-Fi -->
+                    <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-3rem)] sm:w-[480px] md:w-[560px] lg:w-[600px] snap-start rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-7 shadow-sm group transition-all"
+                        data-cursor="project">
+                        <div
+                            class="relative h-[220px] sm:h-[260px] md:h-[290px] rounded-2xl overflow-hidden mb-5 bg-slate-100 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
+                                alt="Instalasi Access Point Wi-Fi Enterprise"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div
-                                class="relative h-[260px] sm:h-[320px] md:h-[380px] rounded-2xl overflow-hidden mb-6 bg-slate-100 flex items-center justify-center">
-                                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80"
-                                    alt="Instalasi Access Point Wi-Fi Enterprise"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
-                                </div>
-                                <div class="absolute bottom-4 left-4 right-4 text-white">
-                                    <span
-                                        class="font-space text-xs font-bold text-white uppercase tracking-widest">Jaringan
-                                        Wi-Fi 6 Berkecepatan Tinggi</span>
-                                </div>
-                                <div
-                                    class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
-                                    <span class="font-space text-xs text-slateDark font-bold">Proyek 2026</span>
-                                </div>
+                                class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
                             </div>
-                            <div class="flex items-start justify-between gap-4">
-                                <div>
-                                    <span
-                                        class="font-space text-xs uppercase tracking-widest text-accentBlue mb-2 block font-bold">Instalasi
-                                        Jaringan & Wi-Fi</span>
-                                    <h3
-                                        class="font-syne font-bold text-xl sm:text-3xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
-                                        Access Point Jaringan Kantor Enterprise</h3>
-                                </div>
-                                <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20Proyek%20Pemasangan%20Access%20Point."
-                                    target="_blank"
-                                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
-                                    <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
-                                </a>
+                            <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-white">
+                                <span
+                                    class="font-space text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest">Jaringan
+                                    Wi-Fi 6 Berkecepatan Tinggi</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
+                                <span class="font-space text-[10px] sm:text-xs text-slateDark font-bold">Proyek 2026</span>
                             </div>
                         </div>
-
-                        <!-- Kartu Proyek 2: Web Hosting Cloud Server -->
-                        <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-2.5rem)] sm:w-[500px] md:w-[620px] rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-8 shadow-sm group transition-all"
-                            data-cursor="project">
-                            <div
-                                class="relative h-[260px] sm:h-[320px] md:h-[380px] rounded-2xl overflow-hidden mb-6 bg-slate-100 flex items-center justify-center">
-                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80"
-                                    alt="Web Hosting Cloud Server Infrastructure"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
-                                </div>
-                                <div class="absolute bottom-4 left-4 right-4 text-white">
-                                    <span
-                                        class="font-space text-xs font-bold text-white uppercase tracking-widest">Server
-                                        Cloud VPS Uptime 99.9%</span>
-                                </div>
-                                <div
-                                    class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
-                                    <span class="font-space text-xs text-slateDark font-bold">Proyek 2026</span>
-                                </div>
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <span
+                                    class="font-space text-xs uppercase tracking-widest text-accentBlue mb-1 block font-bold">Instalasi
+                                    Jaringan & Wi-Fi</span>
+                                <h3
+                                    class="font-syne font-bold text-xl sm:text-2xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
+                                    Access Point Jaringan Kantor Enterprise</h3>
                             </div>
-                            <div class="flex items-start justify-between gap-4">
-                                <div>
-                                    <span
-                                        class="font-space text-xs uppercase tracking-widest text-slateDark mb-2 block font-bold">Cloud
-                                        Hosting & Domain</span>
-                                    <h3
-                                        class="font-syne font-bold text-xl sm:text-3xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
-                                        Infrastruktur Server Web Perusahaan</h3>
-                                </div>
-                                <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20layanan%20Web%20Hosting."
-                                    target="_blank"
-                                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
-                                    <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
-                                </a>
-                            </div>
+                            <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20Proyek%20Pemasangan%20Access%20Point."
+                                target="_blank"
+                                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
+                                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                            </a>
                         </div>
-
-                        <!-- Kartu Proyek 3: Pemasangan CCTV IP Camera -->
-                        <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-2.5rem)] sm:w-[500px] md:w-[620px] rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-8 shadow-sm group transition-all"
-                            data-cursor="project">
-                            <div
-                                class="relative h-[260px] sm:h-[320px] md:h-[380px] rounded-2xl overflow-hidden mb-6 bg-slate-100 flex items-center justify-center">
-                                <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80"
-                                    alt="Pemasangan CCTV IP Camera Security"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
-                                </div>
-                                <div class="absolute bottom-4 left-4 right-4 text-white">
-                                    <span
-                                        class="font-space text-xs font-bold text-white uppercase tracking-widest">Keamanan
-                                        4K HD & Penyimpanan NVR</span>
-                                </div>
-                                <div
-                                    class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
-                                    <span class="font-space text-xs text-slateDark font-bold">Proyek 2025</span>
-                                </div>
-                            </div>
-                            <div class="flex items-start justify-between gap-4">
-                                <div>
-                                    <span
-                                        class="font-space text-xs uppercase tracking-widest text-accentBlue mb-2 block font-bold">Keamanan
-                                        & Surveillance</span>
-                                    <h3
-                                        class="font-syne font-bold text-xl sm:text-3xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
-                                        Sistem Pengawasan CCTV Pintar</h3>
-                                </div>
-                                <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20Pemasangan%20CCTV."
-                                    target="_blank"
-                                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
-                                    <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Kartu Proyek 4: Pembuatan Aplikasi Web & Mobile -->
-                        <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-2.5rem)] sm:w-[500px] md:w-[620px] rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-8 shadow-sm group transition-all"
-                            data-cursor="project">
-                            <div
-                                class="relative h-[260px] sm:h-[320px] md:h-[380px] rounded-2xl overflow-hidden mb-6 bg-slate-100 flex items-center justify-center">
-                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
-                                    alt="Pembuatan Aplikasi Custom Web & Mobile"
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
-                                </div>
-                                <div class="absolute bottom-4 left-4 right-4 text-white">
-                                    <span
-                                        class="font-space text-xs font-bold text-white uppercase tracking-widest">Aplikasi
-                                        React & Sistem Fullstack</span>
-                                </div>
-                                <div
-                                    class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
-                                    <span class="font-space text-xs text-slateDark font-bold">Proyek 2025</span>
-                                </div>
-                            </div>
-                            <div class="flex items-start justify-between gap-4">
-                                <div>
-                                    <span
-                                        class="font-space text-xs uppercase tracking-widest text-slateDark mb-2 block font-bold">Pengembangan
-                                        Perangkat Lunak</span>
-                                    <h3
-                                        class="font-syne font-bold text-xl sm:text-3xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
-                                        Aplikasi Web & Dashboard Manajemen</h3>
-                                </div>
-                                <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20Pembuatan%20Aplikasi."
-                                    target="_blank"
-                                    class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
-                                    <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <!-- Kartu Proyek 2: Web Hosting Cloud Server -->
+                    <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-3rem)] sm:w-[480px] md:w-[560px] lg:w-[600px] snap-start rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-7 shadow-sm group transition-all"
+                        data-cursor="project">
+                        <div
+                            class="relative h-[220px] sm:h-[260px] md:h-[290px] rounded-2xl overflow-hidden mb-5 bg-slate-100 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80"
+                                alt="Web Hosting Cloud Server Infrastructure"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-white">
+                                <span
+                                    class="font-space text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest">Server
+                                    Cloud VPS Uptime 99.9%</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
+                                <span class="font-space text-[10px] sm:text-xs text-slateDark font-bold">Proyek 2026</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <span
+                                    class="font-space text-xs uppercase tracking-widest text-slateDark mb-1 block font-bold">Cloud
+                                    Hosting & Domain</span>
+                                <h3
+                                    class="font-syne font-bold text-xl sm:text-2xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
+                                    Infrastruktur Server Web Perusahaan</h3>
+                            </div>
+                            <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20layanan%20Web%20Hosting."
+                                target="_blank"
+                                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
+                                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Proyek 3: Pemasangan CCTV IP Camera -->
+                    <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-3rem)] sm:w-[480px] md:w-[560px] lg:w-[600px] snap-start rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-7 shadow-sm group transition-all"
+                        data-cursor="project">
+                        <div
+                            class="relative h-[220px] sm:h-[260px] md:h-[290px] rounded-2xl overflow-hidden mb-5 bg-slate-100 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80"
+                                alt="Pemasangan CCTV IP Camera Security"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-white">
+                                <span
+                                    class="font-space text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest">Keamanan
+                                    4K HD & Penyimpanan NVR</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
+                                <span class="font-space text-[10px] sm:text-xs text-slateDark font-bold">Proyek 2025</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <span
+                                    class="font-space text-xs uppercase tracking-widest text-accentBlue mb-1 block font-bold">Keamanan
+                                    & Surveillance</span>
+                                <h3
+                                    class="font-syne font-bold text-xl sm:text-2xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
+                                    Sistem Pengawasan CCTV Pintar</h3>
+                            </div>
+                            <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20Pemasangan%20CCTV."
+                                target="_blank"
+                                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
+                                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Proyek 4: Pembuatan Aplikasi Web & Mobile -->
+                    <div class="portfolio-card project-card flex-shrink-0 w-[85vw] max-w-[calc(100vw-3rem)] sm:w-[480px] md:w-[560px] lg:w-[600px] snap-start rounded-3xl bg-softBg border border-slate-200 p-5 sm:p-7 shadow-sm group transition-all"
+                        data-cursor="project">
+                        <div
+                            class="relative h-[220px] sm:h-[260px] md:h-[290px] rounded-2xl overflow-hidden mb-5 bg-slate-100 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                                alt="Pembuatan Aplikasi Custom Web & Mobile"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-slateDark/80 via-transparent to-transparent">
+                            </div>
+                            <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 text-white">
+                                <span
+                                    class="font-space text-[10px] sm:text-xs font-bold text-white uppercase tracking-widest">Aplikasi
+                                    React & Sistem Fullstack</span>
+                            </div>
+                            <div
+                                class="absolute top-3 right-3 sm:top-4 sm:right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-slate-200 shadow-sm">
+                                <span class="font-space text-[10px] sm:text-xs text-slateDark font-bold">Proyek 2025</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <span
+                                    class="font-space text-xs uppercase tracking-widest text-slateDark mb-1 block font-bold">Pengembangan
+                                    Perangkat Lunak</span>
+                                <h3
+                                    class="font-syne font-bold text-xl sm:text-2xl text-slateDark group-hover:text-accentBlue transition-colors break-words">
+                                    Aplikasi Web & Dashboard Manajemen</h3>
+                            </div>
+                            <a href="https://wa.me/6285748961065?text=Halo%20YogSpace%2C%20saya%20tertarik%20dengan%20Pembuatan%20Aplikasi."
+                                target="_blank"
+                                class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-slate-300 flex items-center justify-center text-slateDark group-hover:bg-slateDark group-hover:border-slateDark group-hover:text-white transition-all flex-shrink-0">
+                                <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

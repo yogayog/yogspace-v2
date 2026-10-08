@@ -197,4 +197,117 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    /* -------------------------------------------------------------------------- */
+    /* 7. SURVEY REGISTRATION MODAL FOR PACKAGE ORDER BUTTONS                     */
+    /* -------------------------------------------------------------------------- */
+    const surveyModal = document.getElementById('survey-modal');
+    const surveyForm = document.getElementById('survey-form');
+    const surveyModalClose = document.getElementById('survey-modal-close');
+    const surveyModalCancel = document.getElementById('survey-modal-cancel');
+    const modalPackageName = document.getElementById('modal-package-name');
+    const modalPackagePrice = document.getElementById('modal-package-price');
+    const surveyDateInput = document.getElementById('survey-date');
+
+    let currentSelectedPackage = { name: '', price: '' };
+
+    function closeSurveyModal() {
+        if (!surveyModal) return;
+        surveyModal.classList.remove('opacity-100', 'pointer-events-auto');
+        surveyModal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    // Attach click listeners to all "Pesan Paket" buttons inside package cards
+    const orderButtons = document.querySelectorAll('.pricing-package-card a');
+    orderButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = btn.closest('.pricing-package-card');
+            
+            let packageName = "Paket Layanan YogSpace";
+            let packagePrice = "";
+
+            if (card) {
+                const titleEl = card.querySelector('h3');
+                const priceEl = card.querySelector('.font-extrabold');
+                if (titleEl) packageName = titleEl.innerText.trim();
+                if (priceEl) packagePrice = priceEl.innerText.trim();
+            }
+
+            currentSelectedPackage = { name: packageName, price: packagePrice };
+
+            if (modalPackageName) modalPackageName.innerText = packageName;
+            if (modalPackagePrice) modalPackagePrice.innerText = packagePrice || 'Konsultasi Gratis';
+
+            // Set default survey date to tomorrow
+            if (surveyDateInput) {
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                surveyDateInput.value = tomorrow.toISOString().split('T')[0];
+            }
+
+            if (surveyModal) {
+                surveyModal.classList.remove('opacity-0', 'pointer-events-none');
+                surveyModal.classList.add('opacity-100', 'pointer-events-auto');
+            }
+        });
+    });
+
+    if (surveyModalClose) surveyModalClose.addEventListener('click', closeSurveyModal);
+    if (surveyModalCancel) surveyModalCancel.addEventListener('click', closeSurveyModal);
+    
+    if (surveyModal) {
+        surveyModal.addEventListener('click', (e) => {
+            if (e.target === surveyModal) closeSurveyModal();
+        });
+    }
+
+    if (surveyForm) {
+        surveyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('survey-name').value.trim();
+            const phone = document.getElementById('survey-phone').value.trim();
+            const address = document.getElementById('survey-address').value.trim();
+            const date = document.getElementById('survey-date').value;
+            const notes = document.getElementById('survey-notes').value.trim();
+
+            if (!name || !phone || !address || !date) return;
+
+            const waMsg = `Halo YogSpace, saya ingin mengajukan Survey & Pemesanan Paket:\n\n` +
+                          `📌 LAYANAN YANG DIPILIH:\n` +
+                          `• Paket: ${currentSelectedPackage.name}\n` +
+                          `• Est. Harga: ${currentSelectedPackage.price || '-'}\n\n` +
+                          `👤 DATA PEMESAN:\n` +
+                          `• Nama Lengkap: ${name}\n` +
+                          `• No. WhatsApp: ${phone}\n` +
+                          `• Alamat Lokasi: ${address}\n\n` +
+                          `📅 RENCANA JADWAL SURVEY:\n` +
+                          `• Tanggal Survey: ${date}\n` +
+                          (notes ? `• Catatan Tambahan: ${notes}\n\n` : `\n`) +
+                          `Mohon konfirmasi jadwal survey & info teknisi selanjutnya. Terima kasih!`;
+
+            const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMsg)}`;
+            window.open(waUrl, '_blank');
+
+            closeSurveyModal();
+            surveyForm.reset();
+        });
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* 8. PORTFOLIO SHOWCASE: HORIZONTAL SCROLL BUTTON CONTROLS                   */
+    /* -------------------------------------------------------------------------- */
+    const portfolioContainer = document.getElementById('portfolio-scroll-container');
+    const scrollLeftBtn = document.getElementById('portfolio-scroll-left');
+    const scrollRightBtn = document.getElementById('portfolio-scroll-right');
+
+    if (portfolioContainer && scrollLeftBtn && scrollRightBtn) {
+        scrollLeftBtn.addEventListener('click', () => {
+            portfolioContainer.scrollBy({ left: -450, behavior: 'smooth' });
+        });
+        scrollRightBtn.addEventListener('click', () => {
+            portfolioContainer.scrollBy({ left: 450, behavior: 'smooth' });
+        });
+    }
 });

@@ -135,31 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* -------------------------------------------------------------------------- */
-    /* 6. PORTFOLIO SHOWCASE: GSAP HORIZONTAL SCROLL PINNING                      */
+    /* 6. PORTFOLIO SHOWCASE: REVEAL ANIMATION                                   */
     /* -------------------------------------------------------------------------- */
-    const portfolioPinWrapper = document.getElementById('portfolio-pin-wrapper');
-    const portfolioTrack = document.getElementById('portfolio-track');
-
-    if (portfolioPinWrapper && portfolioTrack && typeof ScrollTrigger !== 'undefined') {
-        // Calculate scroll length needed
-        const getScrollAmount = () => {
-            let trackWidth = portfolioTrack.scrollWidth;
-            return -(trackWidth - window.innerWidth + 100);
-        };
-
-        const horizontalTween = gsap.to(portfolioTrack, {
-            x: getScrollAmount,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: '#portfolio',
-                pin: true,
-                scrub: 0.8,
-                start: 'top top',
-                end: () => `+=${portfolioTrack.scrollWidth - window.innerWidth + 300}`,
-                invalidateOnRefresh: true
-            }
-        });
-    }
+    // Portfolio cards stay 100% visible natively to ensure perfect rendering.
 
     // Refresh ScrollTrigger after assets load to align pinning and scroll lengths perfectly
     window.addEventListener('load', () => {
