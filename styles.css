@@ -325,3 +325,40 @@ html.dark ::-webkit-scrollbar-thumb:hover {
 body, header, nav, section, footer, div, span, p, h1, h2, h3, h4, a, button, input, select, textarea {
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* ===== Survey Modal Scrollbar (terintegrasi di dalam form) ===== */
+#survey-modal > div {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(15, 23, 42, 0.2) transparent;
+}
+#survey-modal > div::-webkit-scrollbar {
+    width: 5px;
+}
+#survey-modal > div::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0 1rem 1rem 0;
+}
+#survey-modal > div::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.18);
+    border-radius: 99px;
+}
+#survey-modal > div::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.38);
+}
+html.dark #survey-modal > div {
+    scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+html.dark #survey-modal > div::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+}
+html.dark #survey-modal > div::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.38);
+}
+
+/* ===== Date Input — mencegah overflow di mobile ===== */
+input[type="date"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
